@@ -16,8 +16,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Memorama" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="amO-ip-RJw">
+                                <rect key="frame" x="107.33333333333333" y="60" width="178.66666666666669" height="40.666666666666657"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="dV1-Hn-bS1">
-                                <rect key="frame" x="46.666666666666657" y="175" width="300" height="523"/>
+                                <rect key="frame" x="46.666666666666657" y="148" width="300" height="523"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="Dfx-dd-8Io">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="118"/>
@@ -151,20 +157,14 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pares restantes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WXX-Uf-hKw">
-                                <rect key="frame" x="123.00000000000001" y="107" width="147.33333333333337" height="24"/>
+                                <rect key="frame" x="137" y="108" width="147.33333333333337" height="24"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5hP-4W-yeo">
-                                <rect key="frame" x="190" y="141" width="13.333333333333343" height="24"/>
+                                <rect key="frame" x="107" y="108" width="13.333333333333329" height="24"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Memorama" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="amO-ip-RJw">
-                                <rect key="frame" x="107.33333333333333" y="60" width="178.66666666666669" height="40.666666666666657"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -172,14 +172,14 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="WXX-Uf-hKw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1aj-tw-JHF"/>
+                            <constraint firstItem="WXX-Uf-hKw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="14.166666666666686" id="1aj-tw-JHF"/>
                             <constraint firstItem="dV1-Hn-bS1" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="a5U-6u-NB9"/>
-                            <constraint firstItem="WXX-Uf-hKw" firstAttribute="top" secondItem="dV1-Hn-bS1" secondAttribute="bottom" constant="-591" id="daG-Yj-MvC"/>
-                            <constraint firstItem="5hP-4W-yeo" firstAttribute="top" secondItem="dV1-Hn-bS1" secondAttribute="bottom" constant="-557" id="e1B-Mn-bVH"/>
+                            <constraint firstItem="WXX-Uf-hKw" firstAttribute="top" secondItem="dV1-Hn-bS1" secondAttribute="bottom" constant="-563" id="daG-Yj-MvC"/>
+                            <constraint firstItem="5hP-4W-yeo" firstAttribute="top" secondItem="dV1-Hn-bS1" secondAttribute="bottom" constant="-563" id="e1B-Mn-bVH"/>
                             <constraint firstItem="amO-ip-RJw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="1" id="m0o-9s-1TS"/>
                             <constraint firstItem="amO-ip-RJw" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="pOQ-45-8hx"/>
-                            <constraint firstItem="5hP-4W-yeo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="r6e-XQ-znW"/>
-                            <constraint firstItem="dV1-Hn-bS1" firstAttribute="top" secondItem="amO-ip-RJw" secondAttribute="bottom" constant="74.333333333333343" id="vhe-hj-jMw"/>
+                            <constraint firstItem="5hP-4W-yeo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-82.833333333333329" id="r6e-XQ-znW"/>
+                            <constraint firstItem="dV1-Hn-bS1" firstAttribute="top" secondItem="amO-ip-RJw" secondAttribute="bottom" constant="47.333333333333343" id="vhe-hj-jMw"/>
                         </constraints>
                     </view>
                 </viewController>
