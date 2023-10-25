@@ -213,16 +213,28 @@ class ViewController: UIViewController {
         }
 
     self.btn1.setImage(UIImage(named: "empty"), for: .normal)
+        self.btn1.isEnabled = true
     self.btn2.setImage(UIImage(named: "empty"), for: .normal)
+        self.btn2.isEnabled = true
     self.btn3.setImage(UIImage(named: "empty"), for: .normal)
+        self.btn3.isEnabled = true
     self.btn4.setImage(UIImage(named: "empty"), for: .normal)
+        self.btn4.isEnabled = true
     self.btn5.setImage(UIImage(named: "empty"), for: .normal)
+        self.btn5.isEnabled = true
     self.btn6.setImage(UIImage(named: "empty"), for: .normal)
+        self.btn6.isEnabled = true
     self.btn7.setImage(UIImage(named: "empty"), for: .normal)
+        self.btn7.isEnabled = true
     self.btn8.setImage(UIImage(named: "empty"), for: .normal)
+        self.btn8.isEnabled = true
     self.btn9.setImage(UIImage(named: "empty"), for: .normal)
+        self.btn9.isEnabled = true
     self.btn10.setImage(UIImage(named: "empty"), for: .normal)
+        self.btn10.isEnabled = true
     self.btn11.setImage(UIImage(named: "empty"), for: .normal)
-    self.btn12.setImage(UIImage(named: "empty"), for: .normal)
+        self.btn11.isEnabled = true
+        self.btn12.setImage(UIImage(named: "empty"), for: .normal)
+        self.btn2.isEnabled = true
     }
 }
