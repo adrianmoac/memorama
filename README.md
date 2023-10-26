@@ -5,6 +5,8 @@
 - Angel Estrada Centeno // A01732584
 - Fernando Estrada Silva // A01736094
 
+Liga del video demostrativo: https://youtube.com/shorts/rp9vjoouNP4
+
   
 A continuación se muestra la elaboración de un videojuego utilizando swift con xCode como evidencia de la Semana Tec Herramientas de la Herramientas computacionales: el arte de la programación. 
 Se trata de un juego de memoria que consiste en adivinar la posición de 6 pares de imagenes iguales para ganar. Se selecciona una imagen inicialmente y el ususario debe encontrar el par para el resto. 
