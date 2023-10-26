@@ -24,23 +24,23 @@ class ViewController: UIViewController {
     @IBOutlet weak var btn11: UIButton!
     @IBOutlet weak var btn12: UIButton!
     
-    var count = 0
-    var missing = 6
-    var randomArray: [String] = []
-    var selection: [Int] = []
+    var count = 0 // contador para verificar cuantos botones se presionaron
+    var missing = 6 // contador con el número de parejas restantes
+    var randomArray: [String] = [] // arreglo que almacena el nombre de las fotos para el botón
+    var selection: [Int] = [] // arreglo que almacena los botones presionados
     
     override func viewDidLoad() {
         super.viewDidLoad()
         startGame()
-        // Do any additional setup after loading the view.
     }
 
-    @IBAction func handleTap(_ sender: UIButton) {
+    @IBAction func handleTap(_ sender: UIButton) {//Función que realiza acciones al presionar un botón
+        // verificar qué botón fue presionado
         if sender == btn1 {
-                    btn1.setImage( UIImage.init(named: randomArray[0]), for: .normal)
-                    selection.append(0)
-                    btn1.isEnabled = false
-                    count += 1
+                    btn1.setImage( UIImage.init(named: randomArray[0]), for: .normal) // Se revela la imagen que contiene ese botón
+                    selection.append(0) // Se almacena en un arreglo el botón presionado
+                    btn1.isEnabled = false // Se desabilita el botón para evitar que se vuelva a presionar
+                    count += 1 // Se suma uno al contador para llevar la cuenta del número de botones presionados
                 } else if sender == btn2 {
                     btn2.setImage( UIImage.init(named: randomArray[1]), for: .normal)
                     selection.append(1)
@@ -99,18 +99,18 @@ class ViewController: UIViewController {
                 }
                 
                 if count == 2 {
-                    if randomArray[selection[0]] == randomArray[selection[1]] {
-                        missing -= 1
-                        missingLabel.text = String(missing)
-                        count = 0
-                        selection = []
+                    if randomArray[selection[0]] == randomArray[selection[1]] { // En el caso de que se hayan presoinado dos botones y la imagen de estos tenga el mismo nombre, se encontró la pareja
+                        missing -= 1 // Se resta uno al missing, que son los pares restantes
+                        missingLabel.text = String(missing) // Se actualiza el label de los pares restantes
+                        count = 0 // Se reinicia el contador de botones presionados
+                        selection = [] // Se reinicia el arreglo con los botones presionados
                     }
-                    else {
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                            for index in 0...1 {
-                                switch self.selection[index] {
-                                case 0: self.btn1.setImage(UIImage(named: "empty"), for: .normal)
-                                    self.btn1.isEnabled = true
+                    else { // en el caso de que no sean las parejas
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 1) { // Función para que haya un delay y las imágenes desaparezcan después de un segundo
+                            for index in 0...1 { // se recorre dos veces un arreglo
+                                switch self.selection[index] { // Con los valores del arreglo selection se comienza un switch case
+                                case 0: self.btn1.setImage(UIImage(named: "empty"), for: .normal) // Se elimina la imagen del botón, ya que fue incorrecta la selección
+                                    self.btn1.isEnabled = true // Se vuelve a habilitar el botón
                                     break
                                 case 1: self.btn2.setImage(UIImage(named: "empty"), for: .normal)
                                     self.btn2.isEnabled = true
@@ -149,46 +149,47 @@ class ViewController: UIViewController {
                                 default: break
                                 }
                             }
-                            self.count = 0
-                            self.selection = []
+                            self.count = 0 // Se reinicia el contador de botones seleccionados
+                            self.selection = [] // Se reinicia el arreglo con los botones seleccionados
                         }
                         
 
                     }
                 }
                 
-                if missing == 0 {
-                    let alert = UIAlertController(title: "You won", message: "Congratulations", preferredStyle: .alert)
-                    let action = UIAlertAction(title: "Ok", style: .default)
-                    alert.addAction(action)
-                    self.present(alert, animated: true)
-                    missing = 6
-                    randomArray = []
-                    startGame()
+                if missing == 0 { // En el caso de que ya no hayan parejas restantes
+                    let alert = UIAlertController(title: "You won", message: "Congratulations", preferredStyle: .alert) // Se crea un alert para informarle al usuario que ganó
+                    let action = UIAlertAction(title: "Ok", style: .default) // Se especifica la acción a realizar
+                    alert.addAction(action) // Se agrega la acción a la alerta
+                    self.present(alert, animated: true) // Se presenta la alerta
+                    missing = 6 // Se reinician las parejas restantes
+                    randomArray = [] // Se reinicia el array aleatorio
+                    startGame() // Se reinicia el juego
                 }
 
         
     }
     
-    func startGame () {
-        var randomIntArray: [Int] = []
-        var counter = 0
+    func startGame () { // Función que inicializa el juego
+        var randomIntArray: [Int] = [] // Arreglo en donde se almacenarán el valor para las imágenes aleatorias
+        var counter = 0 // contador para recorrer las 12 cartas
         
-        missingLabel.text = "6"
+        missingLabel.text = "6" // Inicilización del label de parejas restantes
         
-        while (counter < 12) {
-            let randomInt = Int.random(in: 1..<13)
-            if !randomIntArray.contains(randomInt) {
-                randomIntArray.append(randomInt)
-                counter += 1
+        while (counter < 12) { // Se recorren 12 posiciones, las 12 cartas
+            let randomInt = Int.random(in: 1..<13) // Se generan números aleatorios del 1 al 12
+            if !randomIntArray.contains(randomInt) { // se verifica si ya está en el arreglo
+                randomIntArray.append(randomInt) // Se agregan al arreglo de ints
+                counter += 1 // se suma uno al contador
             }
+            // En el caso de que el número ya esté en el arreglo, continua el ciclo
             
         }
         
-        var c = 0
+        var c = 0 //Contador para recorrer las doce cartas
         while (c < 12) {
             switch randomIntArray[c] {
-            case 1, 2: randomArray.append("grande")
+            case 1, 2: randomArray.append("grande") // En el caso de que haya una coincidencia, se agrega una determinada imagen
                 c += 1
                 break
             case 3, 4: randomArray.append("guess")
@@ -212,8 +213,8 @@ class ViewController: UIViewController {
 
         }
 
-    self.btn1.setImage(UIImage(named: "empty"), for: .normal)
-        self.btn1.isEnabled = true
+    self.btn1.setImage(UIImage(named: "empty"), for: .normal) // Se inicializan las imágenes de los botones como vacíos
+        self.btn1.isEnabled = true                            // Se habilitan los botones
     self.btn2.setImage(UIImage(named: "empty"), for: .normal)
         self.btn2.isEnabled = true
     self.btn3.setImage(UIImage(named: "empty"), for: .normal)
@@ -234,7 +235,7 @@ class ViewController: UIViewController {
         self.btn10.isEnabled = true
     self.btn11.setImage(UIImage(named: "empty"), for: .normal)
         self.btn11.isEnabled = true
-        self.btn12.setImage(UIImage(named: "empty"), for: .normal)
+    self.btn12.setImage(UIImage(named: "empty"), for: .normal)
         self.btn2.isEnabled = true
     }
 }
