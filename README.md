@@ -5,7 +5,7 @@
 - Angel Estrada Centeno // A01732584
 - Fernando Estrada Silva // A01736094
 
-Liga del video demostrativo: https://youtube.com/shorts/rp9vjoouNP4
+Liga del video demostrativo: https://youtube.com/shorts/bNzIzynxBJI?feature=share
 
   
 A continuación se muestra la elaboración de un videojuego utilizando swift con xCode como evidencia de la Semana Tec Herramientas de la Herramientas computacionales: el arte de la programación. 
