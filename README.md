@@ -1,7 +1,7 @@
 # Evidencia: Desarrollo de videojuego en xCode
 ### Semana Tec - Herramientas computacionales: el arte de la programación.
 ***
-- Adrián Moras Acuña // A01552359
+- Adrián Moras Acuña // A01552359 
 - Angel Estrada Centeno // A01732584
 - Fernando Estrada Silva // A01736094
 
